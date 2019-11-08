@@ -2,6 +2,8 @@
   <h1>Add a cocktail to the list !</h1>
   <%= simple_form_for(@cocktail) do |f| %>
       <%= f.input :name %>
+      <%= f.input :picture %>
+      <%= f.input :photo_cache, as: :hidden %>
       <%= f.submit "Add a cocktail", :class => "btn btn-primary"%>
   <% end %>
 
