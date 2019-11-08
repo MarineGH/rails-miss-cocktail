@@ -1,0 +1,14 @@
+<div class="index">
+    <div class="container">
+
+      <h1 class="mb-3">Here are all of your cocktails !</h1>
+          <div class="grid">
+            <% @cocktails.each do |cocktail| %>
+              <div class="cocktail-card p-4 mb-2 d-flex bg-white justify-content-between">
+                <%= cocktail.name %>
+                <%= link_to "Show more", cocktail_path(cocktail)%>
+              </div>
+            <% end %>
+          </div>
+    </div>
+</div>
