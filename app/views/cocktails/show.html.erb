@@ -1,5 +1,6 @@
 <div class="container">
   <div class="banner">
+    <%= image_tag @cocktail.picture.url(:big) %>
   </div>
   <h1 class="white">More about <%= @cocktail.name %></h1>
   <h3>Ingredients : </h3>

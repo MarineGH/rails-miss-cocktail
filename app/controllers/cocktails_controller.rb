@@ -14,7 +14,12 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.create(cocktail_params)
-    redirect_to "cocktails"
+    redirect_to cocktails_path
+  end
+
+  def destroy
+    @cocktail.destroy
+    redirect_to cocktails_path
   end
 
   private
@@ -24,6 +29,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :doses)
+    params.require(:cocktail).permit(:name, :doses, :picture, :picture_cache)
   end
 end
